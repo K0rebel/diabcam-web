@@ -4,7 +4,11 @@ import '../globals.css'
 export const metadata: Metadata = {
   title: 'DiabCam - Liczy się mniej liczenia',
   description: 'AI Food Scanner for Diabetics and Keto - Scan, Eat, Track.',
+  icons: {
+    icon: '/assets/icon-rounded.png',
+  },
 }
+
 
 export default async function RootLayout({
   children,
