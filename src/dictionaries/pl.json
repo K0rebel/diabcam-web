@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "Liczy się mniej liczenia",
+    "description": "DiabCam to inteligentny skaner posiłków AI, który odciąży Cię od żmudnego wpisywania danych. Zrób zdjęcie, a resztę zrobi za Ciebie nasza technologia.",
+    "cta": "Pobierz w Google Play"
+  },
+  "features": {
+    "aiTitle": "Technologia Vision AI",
+    "aiDesc": "Nasz zaawansowany model rozpoznaje składniki, szacuje wagę i wykrywa ukryte kalorie w sosach i olejach.",
+    "voiceTitle": "Opisy Głosowe",
+    "voiceDesc": "Nie chcesz robić zdjęcia? Po prostu opowiedz DiabCam, co zjadłeś, a AI zajmie się obliczeniami."
+  },
+  "diets": {
+    "diabeticTitle": "Dla Diabetyków",
+    "diabeticDesc": "Automatyczne wyliczanie WW, WBT, IG oraz ŁG. Generuj profesjonalne raporty PDF dla swojego lekarza.",
+    "ketoTitle": "Dla Keto i Low Carb",
+    "ketoDesc": "Precyzyjne śledzenie węglowodanów netto oraz proporcji tłuszczowych niezbędnych w diecie ketogenicznej.",
+    "fitnessTitle": "Dla Dbających o Sylwetkę",
+    "fitnessDesc": "Monitoruj makroskładniki i kalorie bez konieczności ręcznego ważenia każdego produktu."
+  },
+  "stats": {
+    "title": "Dziennik i Statystyki",
+    "desc": "Przejrzysty kalendarz, historia posiłków i interaktywne wykresy postępów w zasięgu ręki.",
+    "sync": "Twoje dane są bezpieczne i zawsze zsynchronizowane w chmurze."
+  },
+  "footer": {
+    "privacy": "Polityka Prywatności",
+    "terms": "Warunki Użytkowania",
+    "rights": "© 2026 DiabCam. Wszelkie prawa zastrzeżone."
+  }
+}
