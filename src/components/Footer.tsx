@@ -2,7 +2,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './Footer.module.css'
 
-export default function Footer({ dict }: { dict: any }) {
+export default function Footer({ lang, dict }: { lang: string; dict: any }) {
+  const privacyPath = lang === 'pl' ? '/pl/polityka-prywatnosci' : '/en/privacy-policy'
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -17,7 +19,7 @@ export default function Footer({ dict }: { dict: any }) {
             <span>DiabCam</span>
           </div>
           <div className={styles.links}>
-            <Link href="#">{dict.footer.privacy}</Link>
+            <Link href={privacyPath}>{dict.footer.privacy}</Link>
             <Link href="#">{dict.footer.terms}</Link>
           </div>
         </div>
