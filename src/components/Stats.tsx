@@ -32,11 +32,11 @@ export default function Stats({ dict }: { dict: any }) {
             <div className={styles.features}>
               <div className={styles.feature}>
                 <div className={styles.icon}><Calendar size={20} /></div>
-                <span>Intuicyjny kalendarz posiłków</span>
+                <span>{dict.stats.calendar}</span>
               </div>
               <div className={styles.feature}>
                 <div className={styles.icon}><BarChart3 size={20} /></div>
-                <span>Zaawansowane raporty do celów medycznych</span>
+                <span>{dict.stats.reports}</span>
               </div>
               <div className={styles.feature}>
                 <div className={styles.icon}><Cloud size={20} /></div>

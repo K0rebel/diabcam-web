@@ -7,7 +7,7 @@ export default function ValueProp({ dict }: { dict: any }) {
       <div className="container">
         <div className={styles.header}>
           <h2 className={styles.title}>{dict.hero.title}</h2>
-          <p className={styles.subtitle}>Poznaj korzyści dopasowane do Twoich potrzeb</p>
+          <p className={styles.subtitle}>{dict.diets.subtitle}</p>
         </div>
         <div className={styles.grid}>
           <div className={`${styles.item} animate-fade-in`}>

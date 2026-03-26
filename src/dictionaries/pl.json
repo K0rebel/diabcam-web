@@ -5,22 +5,28 @@
     "cta": "Pobierz w Google Play"
   },
   "features": {
-    "aiTitle": "Technologia Vision AI",
-    "aiDesc": "Nasz zaawansowany model rozpoznaje składniki, szacuje wagę i wykrywa ukryte kalorie w sosach i olejach.",
-    "voiceTitle": "Opisy Głosowe",
-    "voiceDesc": "Nie chcesz robić zdjęcia? Po prostu opowiedz DiabCam, co zjadłeś, a AI zajmie się obliczeniami."
+    "title": "3 sposoby na dodanie posiłku",
+    "photoTitle": "Zdjęcie",
+    "photoDesc": "Sztuczna inteligencja rozpoznaje potrawy na podstawie zdjęcia. AI zidentyfikuje składniki i poda wartości odżywcze.",
+    "describeTitle": "Opisz",
+    "describeDesc": "Analiza głosowa lub opisowa. Powiedz „pierś z kurczaka z brokułami”, a aplikacja zajmie się resztą.",
+    "searchTitle": "Wyszukaj",
+    "searchDesc": "Skanuj kody kreskowe lub przeszukuj bazę ponad 5 milionów produktów."
   },
   "diets": {
+    "subtitle": "Poznaj korzyści dopasowane do Twoich potrzeb",
     "diabeticTitle": "Dla Diabetyków",
-    "diabeticDesc": "Automatyczne wyliczanie WW, WBT, IG oraz ŁG. Generuj profesjonalne raporty PDF dla swojego lekarza.",
+    "diabeticDesc": "Precyzyjne szacowanie WW (Wymienników Węglowodanowych) i WBT (Białkowo-Tłuszczowych). Kontrola IG i Ładunku Glikemicznego.",
     "ketoTitle": "Dla Keto i Low Carb",
-    "ketoDesc": "Precyzyjne śledzenie węglowodanów netto oraz proporcji tłuszczowych niezbędnych w diecie ketogenicznej.",
+    "ketoDesc": "Automatyczne śledzenie węglowodanów netto i proporcji makroskładników zoptymalizowanych pod Twoje zapotrzebowanie.",
     "fitnessTitle": "Dla Dbających o Sylwetkę",
     "fitnessDesc": "Monitoruj makroskładniki i kalorie bez konieczności ręcznego ważenia każdego produktu."
   },
   "stats": {
     "title": "Dziennik i Statystyki",
-    "desc": "Przejrzysty kalendarz, historia posiłków i interaktywne wykresy postępów w zasięgu ręki.",
+    "desc": "Przejrzysta historia Twojego żywienia i raporty PDF, które możesz przeanalizować ze swoim dietetykiem.",
+    "calendar": "Intuicyjny kalendarz posiłków",
+    "reports": "Zaawansowane raporty do celów medycznych",
     "sync": "Twoje dane są bezpieczne i zawsze zsynchronizowane w chmurze."
   },
   "footer": {

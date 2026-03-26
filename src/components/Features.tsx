@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './Features.module.css'
-import { Eye, Mic, ListChecks } from 'lucide-react'
+import { Camera, Mic, Search } from 'lucide-react'
 
 export default function Features({ dict }: { dict: any }) {
   return (
@@ -8,17 +8,17 @@ export default function Features({ dict }: { dict: any }) {
       <div className="container">
         <div className={styles.grid}>
           <div className={`${styles.content} animate-fade-in`}>
-            <h2 className={styles.title}>{dict.features.aiTitle}</h2>
-            <p className={styles.description}>{dict.features.aiDesc}</p>
+            <h2 className={styles.title}>{dict.features.title}</h2>
+            <p className={styles.description}>{dict.features.description}</p>
 
             <div className={styles.cards}>
               <div className={styles.card}>
                 <div className={styles.icon}>
-                  <Eye size={24} />
+                  <Camera size={24} />
                 </div>
                 <div>
-                  <h3>Vision AI</h3>
-                  <p>{dict.features.aiDesc}</p>
+                  <h3>{dict.features.photoTitle}</h3>
+                  <p>{dict.features.photoDesc}</p>
                 </div>
               </div>
               <div className={styles.card}>
@@ -26,13 +26,22 @@ export default function Features({ dict }: { dict: any }) {
                   <Mic size={24} />
                 </div>
                 <div>
-                  <h3>{dict.features.voiceTitle}</h3>
-                  <p>{dict.features.voiceDesc}</p>
+                  <h3>{dict.features.describeTitle}</h3>
+                  <p>{dict.features.describeDesc}</p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <div className={styles.icon}>
+                  <Search size={24} />
+                </div>
+                <div>
+                  <h3>{dict.features.searchTitle}</h3>
+                  <p>{dict.features.searchDesc}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className={`${styles.visual} animate-fade-in delay-2`}>
+          <div className={`${styles.visual} animate-fade-in`}>
             <Image
               src="/assets/screen_scan.webp"
               alt="Scanning Meal"

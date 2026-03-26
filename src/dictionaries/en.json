@@ -5,22 +5,28 @@
     "cta": "Download on Google Play"
   },
   "features": {
-    "aiTitle": "Vision AI Technology",
-    "aiDesc": "Our advanced model recognizes ingredients, estimates weight, and detects hidden calories in sauces and oils.",
-    "voiceTitle": "Voice Descriptions",
-    "voiceDesc": "Don't want to take a photo? Just tell DiabCam what you ate, and the AI will handle the calculations."
+    "title": "3 ways to add a meal",
+    "photoTitle": "Photo",
+    "photoDesc": "Artificial intelligence recognizes dishes based on a photo. AI identifies ingredients and provides nutritional values.",
+    "describeTitle": "Describe",
+    "describeDesc": "Voice or text analysis. Just say \"chicken breast with broccoli\" and the app will handle the rest.",
+    "searchTitle": "Search",
+    "searchDesc": "Scan barcodes or search a database of over 5 million products."
   },
   "diets": {
+    "subtitle": "Explore benefits tailored to your needs",
     "diabeticTitle": "For Diabetics",
-    "diabeticDesc": "Automatic calculation of WW, WBT, GI, and GL. Generate professional PDF reports for your doctor.",
+    "diabeticDesc": "Precise estimation of WW (Carbohydrate Units) and WBT (Protein-Fat Units). Control of GI and Glycemic Load.",
     "ketoTitle": "For Keto & Low Carb",
-    "ketoDesc": "Precise tracking of net carbs and fat ratios essential in a ketogenic diet.",
+    "ketoDesc": "Automatic tracking of net carbs and macronutrient ratios optimized for your needs.",
     "fitnessTitle": "For Fitness Enthusiasts",
     "fitnessDesc": "Monitor macronutrients and calories without the need to manually weigh every product."
   },
   "stats": {
     "title": "Diary & Statistics",
-    "desc": "Clear calendar, meal history, and interactive progress charts at your fingertips.",
+    "desc": "Clear history of your nutrition and PDF reports that you can analyze with your dietitian.",
+    "calendar": "Intuitive meal calendar",
+    "reports": "Advanced reports for medical purposes",
     "sync": "Your data is safe and always synchronized in the cloud."
   },
   "footer": {
