@@ -1,5 +1,12 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import '../globals.css'
+
+const inter = Inter({ 
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: 'DiabCam - Liczy się mniej liczenia',
@@ -20,8 +27,8 @@ export default async function RootLayout({
   const { lang } = await params;
 
   return (
-    <html lang={lang}>
-      <body>
+    <html lang={lang} className={inter.variable}>
+      <body className={inter.className}>
         {children}
       </body>
     </html>

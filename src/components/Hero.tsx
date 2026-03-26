@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './Hero.module.css'
+import heroImg from '../../public/assets/hero-scan.webp'
 
 export default function Hero({ dict }: { dict: any }) {
   return (
@@ -19,13 +20,14 @@ export default function Hero({ dict }: { dict: any }) {
             </a>
           </div>
         </div>
-        <div className={`${styles.mockup} animate-fade-in delay-2`}>
+        <div className={`${styles.mockup} animate-fade-in`}>
           <Image
-            src="/assets/hero-scan.webp"
+            src={heroImg}
             alt="DiabCam Mockup"
             width={450}
             height={900}
             priority
+            fetchPriority="high"
             className={styles.image}
           />
         </div>
