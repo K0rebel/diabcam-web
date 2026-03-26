@@ -9,18 +9,18 @@ export default function Stats({ dict }: { dict: any }) {
         <div className={styles.grid}>
           <div className={`${styles.visual} animate-fade-in`}>
             <div className={styles.imageStack}>
-              <Image 
-                src="/assets/sceen_diary.png" 
-                alt="Diary Screen" 
-                width={300} 
-                height={600} 
+              <Image
+                src="/assets/sceen_diary.webp"
+                alt="Diary Screen"
+                width={300}
+                height={600}
                 className={styles.imageBack}
               />
-              <Image 
-                src="/assets/screen_report.png" 
-                alt="Report Screen" 
-                width={300} 
-                height={600} 
+              <Image
+                src="/assets/screen_report.webp"
+                alt="Report Screen"
+                width={300}
+                height={600}
                 className={styles.imageFront}
               />
             </div>
@@ -28,7 +28,7 @@ export default function Stats({ dict }: { dict: any }) {
           <div className={`${styles.content} animate-fade-in delay-2`}>
             <h2 className={styles.title}>{dict.stats.title}</h2>
             <p className={styles.description}>{dict.stats.desc}</p>
-            
+
             <div className={styles.features}>
               <div className={styles.feature}>
                 <div className={styles.icon}><Calendar size={20} /></div>

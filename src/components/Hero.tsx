@@ -10,8 +10,8 @@ export default function Hero({ dict }: { dict: any }) {
           <p className={styles.description}>{dict.hero.description}</p>
           <div className={`${styles.actions} delay-1`}>
             <a href="https://play.google.com/store/apps/details?id=com.corebell.diabcam" className={styles.cta}>
-              <Image 
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                 alt={dict.hero.cta}
                 width={160}
                 height={48}
@@ -20,11 +20,11 @@ export default function Hero({ dict }: { dict: any }) {
           </div>
         </div>
         <div className={`${styles.mockup} animate-fade-in delay-2`}>
-          <Image 
-            src="/assets/hero-scan.png" 
-            alt="DiabCam Mockup" 
-            width={450} 
-            height={900} 
+          <Image
+            src="/assets/hero-scan.webp"
+            alt="DiabCam Mockup"
+            width={450}
+            height={900}
             priority
             className={styles.image}
           />

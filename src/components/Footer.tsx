@@ -10,11 +10,11 @@ export default function Footer({ lang, dict }: { lang: string; dict: any }) {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <Image 
-              src="/assets/icon-rounded.png" 
-              alt="DiabCam Logo" 
-              width={32} 
-              height={32} 
+            <Image
+              src="/assets/icon-rounded.webp"
+              alt="DiabCam Logo"
+              width={32}
+              height={32}
             />
             <span>DiabCam</span>
           </div>

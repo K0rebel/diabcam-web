@@ -7,11 +7,11 @@ export default function Navbar({ lang, dict }: { lang: string; dict: any }) {
     <nav className={styles.navbar}>
       <div className={`${styles.container} container`}>
         <Link href={`/${lang}`} className={styles.logo}>
-          <Image 
-            src="/assets/icon-rounded.png" 
-            alt="DiabCam Logo" 
-            width={40} 
-            height={40} 
+          <Image
+            src="/assets/icon-rounded.webp"
+            alt="DiabCam Logo"
+            width={40}
+            height={40}
           />
           <span>DiabCam</span>
         </Link>

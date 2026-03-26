@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'DiabCam - Liczy się mniej liczenia',
   description: 'AI Food Scanner for Diabetics and Keto - Scan, Eat, Track.',
   icons: {
-    icon: '/assets/icon-rounded.png',
+    icon: '/assets/icon-rounded.webp',
   },
 }
 

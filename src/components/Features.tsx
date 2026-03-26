@@ -10,7 +10,7 @@ export default function Features({ dict }: { dict: any }) {
           <div className={`${styles.content} animate-fade-in`}>
             <h2 className={styles.title}>{dict.features.aiTitle}</h2>
             <p className={styles.description}>{dict.features.aiDesc}</p>
-            
+
             <div className={styles.cards}>
               <div className={styles.card}>
                 <div className={styles.icon}>
@@ -33,11 +33,11 @@ export default function Features({ dict }: { dict: any }) {
             </div>
           </div>
           <div className={`${styles.visual} animate-fade-in delay-2`}>
-            <Image 
-              src="/assets/screen_scan.png" 
-              alt="Scanning Meal" 
-              width={400} 
-              height={800} 
+            <Image
+              src="/assets/screen_scan.webp"
+              alt="Scanning Meal"
+              width={400}
+              height={800}
               className={styles.image}
             />
           </div>
