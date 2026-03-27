@@ -10,10 +10,9 @@ import {
 } from 'firebase/auth'
 import { auth } from '@/lib/firebase'
 import { getDictionary } from '@/lib/get-dictionary'
-import { Loader2, CheckCircle2, XCircle, KeyRound, Mail } from 'lucide-react'
-import { clsx } from 'clsx'
+import { Loader2, CheckCircle2, XCircle, KeyRound } from 'lucide-react'
 
-function AuthActionContent({ lang }: { lang: string }) {
+function AuthActionContent({ lang, searchParams }: { lang: string, searchParams: URLSearchParams }) {
   const [dict, setDict] = useState<any>(null)
   const [status, setStatus] = useState<'loading' | 'success' | 'error' | 'form'>('loading')
   const [mode, setMode] = useState<string | null>(null)
@@ -23,15 +22,23 @@ function AuthActionContent({ lang }: { lang: string }) {
   const [passwordError, setPasswordError] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const searchParams = useSearchParams()
-
+  // Load dictionary
   useEffect(() => {
-    getDictionary(lang as any).then(setDict)
+    const locale = lang || 'pl'
+    getDictionary(locale)
+      .then(setDict)
+      .catch((e) => {
+        console.error("Failed to load dictionary", e)
+        getDictionary('en').then(setDict)
+      })
   }, [lang])
 
+  // Handle Action
   useEffect(() => {
     const modeParam = searchParams.get('mode')
     const oobCodeParam = searchParams.get('oobCode')
+
+    console.log("Auth Action Debug:", { mode: modeParam, hasCode: !!oobCodeParam })
 
     setMode(modeParam)
     setOobCode(oobCodeParam)
@@ -41,51 +48,33 @@ function AuthActionContent({ lang }: { lang: string }) {
       return
     }
 
-    switch (modeParam) {
-      case 'verifyEmail':
-        handleVerifyEmail(oobCodeParam)
-        break
-      case 'resetPassword':
-        handleResetPassword(oobCodeParam)
-        break
-      case 'recoverEmail':
-        handleRecoverEmail(oobCodeParam)
-        break
-      default:
+    const processAction = async () => {
+      try {
+        switch (modeParam) {
+          case 'verifyEmail':
+            await applyActionCode(auth, oobCodeParam)
+            setStatus('success')
+            break
+          case 'resetPassword':
+            await verifyPasswordResetCode(auth, oobCodeParam)
+            setStatus('form')
+            break
+          case 'recoverEmail':
+            await checkActionCode(auth, oobCodeParam)
+            await applyActionCode(auth, oobCodeParam)
+            setStatus('success')
+            break
+          default:
+            setStatus('error')
+        }
+      } catch (error) {
+        console.error('Firebase Auth Action Error:', error)
         setStatus('error')
+      }
     }
+
+    processAction()
   }, [searchParams])
-
-  const handleVerifyEmail = async (code: string) => {
-    try {
-      await applyActionCode(auth, code)
-      setStatus('success')
-    } catch (error) {
-      console.error('Error verifying email:', error)
-      setStatus('error')
-    }
-  }
-
-  const handleResetPassword = async (code: string) => {
-    try {
-      await verifyPasswordResetCode(auth, code)
-      setStatus('form')
-    } catch (error) {
-      console.error('Error verifying reset code:', error)
-      setStatus('error')
-    }
-  }
-
-  const handleRecoverEmail = async (code: string) => {
-    try {
-      await checkActionCode(auth, code)
-      await applyActionCode(auth, code)
-      setStatus('success')
-    } catch (error) {
-      console.error('Error recovering email:', error)
-      setStatus('error')
-    }
-  }
 
   const handleSubmitPassword = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -107,11 +96,13 @@ function AuthActionContent({ lang }: { lang: string }) {
     }
   }
 
-  if (!dict) return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50">
-      <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-    </div>
-  )
+  if (!dict) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      </div>
+    )
+  }
 
   return (
     <main className="min-h-screen flex items-center justify-center p-4 bg-slate-50">
@@ -181,16 +172,21 @@ function AuthActionContent({ lang }: { lang: string }) {
   )
 }
 
-export default function AuthActionPage({ params }: { params: Promise<{ lang: string }> }) {
+function AuthActionPageWrapper({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = use(params)
+  const searchParams = useSearchParams()
   
+  return <AuthActionContent lang={lang} searchParams={searchParams} />
+}
+
+export default function AuthActionPage({ params }: { params: Promise<{ lang: string }> }) {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
         <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
       </div>
     }>
-      <AuthActionContent lang={lang} />
+      <AuthActionPageWrapper params={params} />
     </Suspense>
   )
 }
