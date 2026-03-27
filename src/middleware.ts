@@ -19,7 +19,7 @@ function getLocale(request: NextRequest): string {
 
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl
+  const { pathname, search } = request.nextUrl
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
@@ -29,12 +29,8 @@ export function middleware(request: NextRequest) {
   const locale = getLocale(request)
   const url = request.nextUrl.clone()
   url.pathname = `/${locale}${pathname}`
+  url.search = search // Explicitly preserve all query parameters
   
-  // For auth actions, use rewrite to avoid browser-side redirect complications
-  if (pathname.includes('/auth/action')) {
-    return NextResponse.rewrite(url)
-  }
-
   return NextResponse.redirect(url)
 }
 
