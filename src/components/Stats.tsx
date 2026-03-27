@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './Stats.module.css'
-import { Calendar, BarChart3, Cloud } from 'lucide-react'
+import { Calendar, BarChart3, ClipboardList } from 'lucide-react'
 
 export default function Stats({ dict }: { dict: any }) {
   return (
@@ -39,7 +39,7 @@ export default function Stats({ dict }: { dict: any }) {
                 <span>{dict.stats.reports}</span>
               </div>
               <div className={styles.feature}>
-                <div className={styles.icon}><Cloud size={20} /></div>
+                <div className={styles.icon}><ClipboardList size={20} /></div>
                 <span>{dict.stats.sync}</span>
               </div>
             </div>

@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 80px;
   background: radial-gradient(circle at top right, #f0f4ff 0%, transparent 40%);
 }
 
@@ -84,7 +84,7 @@
   }
   
   .hero {
-    padding-top: 100px;
+    padding-top: 70px;
     min-height: auto;
   }
 

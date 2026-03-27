@@ -24,8 +24,8 @@ export default function Hero({ dict }: { dict: any }) {
           <Image
             src={heroImg}
             alt="DiabCam Mockup"
-            width={450}
-            height={900}
+            width={350}
+            height={700}
             priority
             fetchPriority="high"
             className={styles.image}

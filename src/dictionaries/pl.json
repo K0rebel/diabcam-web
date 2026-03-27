@@ -27,11 +27,11 @@
     "desc": "Przejrzysta historia Twojego żywienia i raporty PDF, które możesz przeanalizować ze swoim dietetykiem.",
     "calendar": "Intuicyjny kalendarz posiłków",
     "reports": "Zaawansowane raporty do celów medycznych",
-    "sync": "Twoje dane są bezpieczne i zawsze zsynchronizowane w chmurze."
+    "sync": "Spersonalizowany plan dietetyczny"
   },
   "footer": {
     "privacy": "Polityka Prywatności",
-    "terms": "Warunki Użytkowania",
+    "contact": "Kontakt",
     "rights": "© 2026 DiabCam. Wszelkie prawa zastrzeżone."
   }
 }

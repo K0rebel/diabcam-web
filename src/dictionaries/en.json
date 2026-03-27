@@ -27,11 +27,11 @@
     "desc": "Clear history of your nutrition and PDF reports that you can analyze with your dietitian.",
     "calendar": "Intuitive meal calendar",
     "reports": "Advanced reports for medical purposes",
-    "sync": "Your data is safe and always synchronized in the cloud."
+    "sync": "Personalized diet plan"
   },
   "footer": {
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use",
+    "contact": "Contact",
     "rights": "© 2026 DiabCam. All rights reserved."
   }
 }

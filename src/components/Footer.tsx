@@ -4,6 +4,7 @@ import styles from './Footer.module.css'
 
 export default function Footer({ lang, dict }: { lang: string; dict: any }) {
   const privacyPath = lang === 'pl' ? '/pl/polityka-prywatnosci' : '/en/privacy-policy'
+  const contactPath = lang === 'pl' ? '/pl/kontakt' : '/en/contact'
 
   return (
     <footer className={styles.footer}>
@@ -20,7 +21,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: any }) {
           </div>
           <div className={styles.links}>
             <Link href={privacyPath}>{dict.footer.privacy}</Link>
-            <Link href="#">{dict.footer.terms}</Link>
+            <Link href={contactPath}>{dict.footer.contact}</Link>
           </div>
         </div>
         <div className={styles.bottom}>
