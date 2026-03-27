@@ -5,10 +5,6 @@ const locales = ['en', 'pl']
 const defaultLocale = 'pl'
 
 function getLocale(request: NextRequest): string {
-  // Check if lang is passed as a query param (common in Firebase action links)
-  const langParam = request.nextUrl.searchParams.get('lang')
-  if (langParam && locales.includes(langParam)) return langParam
-
   const acceptLanguage = request.headers.get('accept-language')
   if (acceptLanguage) {
     if (acceptLanguage.includes('pl')) return 'pl'
@@ -17,24 +13,17 @@ function getLocale(request: NextRequest): string {
   return defaultLocale
 }
 
-
 export function middleware(request: NextRequest) {
-  const { pathname, search } = request.nextUrl
+  const { pathname } = request.nextUrl
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
 
   if (pathnameHasLocale) return
 
-  // Skip middleware redirect for auth actions, let next.config.js handle it
-  if (pathname.includes('/auth/action')) return
-
   const locale = getLocale(request)
-  const url = request.nextUrl.clone()
-  url.pathname = `/${locale}${pathname}`
-  url.search = search // Explicitly preserve all query parameters
-  
-  return NextResponse.redirect(url)
+  request.nextUrl.pathname = `/${locale}${pathname}`
+  return NextResponse.redirect(request.nextUrl)
 }
 
 export const config = {
