@@ -33,5 +33,19 @@
     "privacy": "Polityka Prywatności",
     "contact": "Kontakt",
     "rights": "© 2026 DiabCam. Wszelkie prawa zastrzeżone."
+  },
+  "auth": {
+    "verifying": "Weryfikowanie...",
+    "verifySuccess": "Twój email został zweryfikowany pomyślnie!",
+    "verifyError": "Kod weryfikacyjny jest nieprawidłowy lub wygasł.",
+    "resetPassword": "Zresetuj hasło",
+    "newPassword": "Nowe hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "resetSuccess": "Twoje hasło zostało zmienione pomyślnie!",
+    "resetError": "Podanego linku nie można użyć do zresetowania hasła. Może być nieaktualny.",
+    "passwordMismatch": "Hasła nie są identyczne.",
+    "submitting": "Przesyłanie...",
+    "invalidMode": "Nieprawidłowa akcja.",
+    "backToApp": "Wróć do aplikacji"
   }
 }

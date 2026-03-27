@@ -33,5 +33,19 @@
     "privacy": "Privacy Policy",
     "contact": "Contact",
     "rights": "© 2026 DiabCam. All rights reserved."
+  },
+  "auth": {
+    "verifying": "Verifying...",
+    "verifySuccess": "Your email has been successfully verified!",
+    "verifyError": "The verification code is invalid or has expired.",
+    "resetPassword": "Reset Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "resetSuccess": "Your password has been changed successfully!",
+    "resetError": "This link cannot be used to reset your password. It may be outdated.",
+    "passwordMismatch": "Passwords do not match.",
+    "submitting": "Submitting...",
+    "invalidMode": "Invalid action.",
+    "backToApp": "Back to App"
   }
 }
