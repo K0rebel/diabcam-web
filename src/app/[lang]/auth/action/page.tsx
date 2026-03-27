@@ -12,7 +12,7 @@ import { auth } from '@/lib/firebase'
 import { getDictionary } from '@/lib/get-dictionary'
 import { Loader2, CheckCircle2, XCircle, KeyRound } from 'lucide-react'
 
-function AuthActionContent({ lang, searchParams }: { lang: string, searchParams: URLSearchParams }) {
+function AuthActionContent({ lang }: { lang: string }) {
   const [dict, setDict] = useState<any>(null)
   const [status, setStatus] = useState<'loading' | 'success' | 'error' | 'form'>('loading')
   const [mode, setMode] = useState<string | null>(null)
@@ -21,6 +21,8 @@ function AuthActionContent({ lang, searchParams }: { lang: string, searchParams:
   const [confirmPassword, setConfirmPassword] = useState('')
   const [passwordError, setPasswordError] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const searchParams = useSearchParams()
 
   // Load dictionary
   useEffect(() => {
@@ -172,21 +174,16 @@ function AuthActionContent({ lang, searchParams }: { lang: string, searchParams:
   )
 }
 
-function AuthActionPageWrapper({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = use(params)
-  const searchParams = useSearchParams()
-  
-  return <AuthActionContent lang={lang} searchParams={searchParams} />
-}
-
 export default function AuthActionPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = use(params)
+  
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
         <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
       </div>
     }>
-      <AuthActionPageWrapper params={params} />
+      <AuthActionContent lang={lang} />
     </Suspense>
   )
 }

@@ -26,6 +26,9 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return
 
+  // Skip middleware redirect for auth actions, let next.config.js handle it
+  if (pathname.includes('/auth/action')) return
+
   const locale = getLocale(request)
   const url = request.nextUrl.clone()
   url.pathname = `/${locale}${pathname}`

@@ -5,6 +5,14 @@ const nextConfig = {
     appIsrStatus: false,
     buildActivity: false,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/auth/action',
+        destination: '/pl/auth/action',
+      },
+    ]
+  },
 }
 
 
