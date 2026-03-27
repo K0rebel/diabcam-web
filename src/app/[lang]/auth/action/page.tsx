@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, use } from 'react'
+import { useEffect, useState, use, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { 
   applyActionCode, 
@@ -13,8 +13,7 @@ import { getDictionary } from '@/lib/get-dictionary'
 import { Loader2, CheckCircle2, XCircle, KeyRound, Mail } from 'lucide-react'
 import { clsx } from 'clsx'
 
-export default function AuthActionPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = use(params)
+function AuthActionContent({ lang }: { lang: string }) {
   const [dict, setDict] = useState<any>(null)
   const [status, setStatus] = useState<'loading' | 'success' | 'error' | 'form'>('loading')
   const [mode, setMode] = useState<string | null>(null)
@@ -38,7 +37,7 @@ export default function AuthActionPage({ params }: { params: Promise<{ lang: str
     setOobCode(oobCodeParam)
 
     if (!modeParam || !oobCodeParam) {
-      setStatus('error')
+      if (modeParam || oobCodeParam) setStatus('error')
       return
     }
 
@@ -108,7 +107,11 @@ export default function AuthActionPage({ params }: { params: Promise<{ lang: str
     }
   }
 
-  if (!dict) return null
+  if (!dict) return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+    </div>
+  )
 
   return (
     <main className="min-h-screen flex items-center justify-center p-4 bg-slate-50">
@@ -175,5 +178,19 @@ export default function AuthActionPage({ params }: { params: Promise<{ lang: str
         )}
       </div>
     </main>
+  )
+}
+
+export default function AuthActionPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = use(params)
+  
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      </div>
+    }>
+      <AuthActionContent lang={lang} />
+    </Suspense>
   )
 }
