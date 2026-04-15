@@ -33,5 +33,13 @@
     "privacy": "Privacy Policy",
     "contact": "Contact",
     "rights": "© 2026 DiabCam. All rights reserved."
+  },
+  "waitlist": {
+    "title": "Release on iOS soon!",
+    "description": "Join the waitlist and we will notify you as soon as the app drops in the App Store.",
+    "placeholder": "Your email address",
+    "button": "Join Waitlist",
+    "success": "Thank you! We'll keep you posted.",
+    "error": "An error occurred. Please try again later."
   }
 }

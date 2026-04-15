@@ -5,6 +5,7 @@ import Features from '@/components/Features'
 import ValueProp from '@/components/ValueProp'
 import Stats from '@/components/Stats'
 import Footer from '@/components/Footer'
+import IosWaitlist from '@/components/IosWaitlist'
 
 export default async function Page({
   params,
@@ -22,6 +23,7 @@ export default async function Page({
       <Features dict={dict} />
       <ValueProp dict={dict} />
       <Stats dict={dict} />
+      <IosWaitlist dict={dict} />
       <Footer lang={lang} dict={dict} />
     </main>
   )

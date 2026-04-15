@@ -33,5 +33,13 @@
     "privacy": "Polityka Prywatności",
     "contact": "Kontakt",
     "rights": "© 2026 DiabCam. Wszelkie prawa zastrzeżone."
+  },
+  "waitlist": {
+    "title": "Premiera na iOS wkrótce!",
+    "description": "Zapisz się na listę oczekujących, a powiadomimy Cię jako jednych z pierwszych, gdy aplikacja pojawi się w App Store.",
+    "placeholder": "Twój adres e-mail",
+    "button": "Zapisz mnie",
+    "success": "Dziękujemy! Odezwiemy się w dniu premiery.",
+    "error": "Wystąpił błąd. Spróbuj ponownie później."
   }
 }
