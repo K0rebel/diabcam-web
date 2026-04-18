@@ -34,16 +34,21 @@
   gap: 24px;
 }
 
-.langSwitch {
+.navLink {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--foreground);
   transition: var(--transition);
 }
 
-.langSwitch:hover {
+.navLink:hover {
   color: var(--primary);
 }
+
+.langSwitch {
+  composes: navLink;
+}
+
 
 .cta {
   background: var(--primary);
@@ -65,9 +70,10 @@
     height: 70px;
   }
 
-  .langSwitch {
+  .links a:not(.cta) {
     display: none;
   }
+
 
   .logo span {
     display: none;

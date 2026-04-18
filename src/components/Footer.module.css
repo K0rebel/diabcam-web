@@ -51,3 +51,21 @@
     align-items: center;
   }
 }
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socialLink {
+  color: var(--text-muted);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.socialLink:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+

@@ -14,7 +14,9 @@
     "searchDesc": "Skanuj kody kreskowe lub przeszukuj bazę ponad 5 milionów produktów."
   },
   "diets": {
+    "title": "Dlaczego DiabCam?",
     "subtitle": "Poznaj korzyści dopasowane do Twoich potrzeb",
+
     "diabeticTitle": "Dla Diabetyków",
     "diabeticDesc": "Precyzyjne szacowanie WW (Wymienników Węglowodanowych) i WBT (Białkowo-Tłuszczowych). Kontrola IG i Ładunku Glikemicznego.",
     "ketoTitle": "Dla Keto i Low Carb",
@@ -34,7 +36,12 @@
     "contact": "Kontakt",
     "rights": "© 2026 DiabCam. Wszelkie prawa zastrzeżone."
   },
+  "news": {
+    "title": "Aktualności",
+    "description": "Śledź nasze najnowsze posty i aktualizacje bezpośrednio z Facebooka."
+  },
   "waitlist": {
+
     "title": "Premiera na iOS wkrótce!",
     "description": "Zapisz się na listę oczekujących, a powiadomimy Cię jako jednych z pierwszych, gdy aplikacja pojawi się w App Store.",
     "placeholder": "Twój adres e-mail",

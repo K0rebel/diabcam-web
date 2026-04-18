@@ -6,7 +6,8 @@ export default function ValueProp({ dict }: { dict: any }) {
     <section className={`${styles.valueProp} section`}>
       <div className="container">
         <div className={styles.header}>
-          <h2 className={styles.title}>{dict.hero.title}</h2>
+          <h2 className={styles.title}>{dict.diets.title}</h2>
+
           <p className={styles.subtitle}>{dict.diets.subtitle}</p>
         </div>
         <div className={styles.grid}>

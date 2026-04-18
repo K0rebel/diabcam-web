@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Facebook } from 'lucide-react'
 import styles from './Footer.module.css'
+
 
 export default function Footer({ lang, dict }: { lang: string; dict: any }) {
   const privacyPath = lang === 'pl' ? '/pl/polityka-prywatnosci' : '/en/privacy-policy'
@@ -27,8 +29,17 @@ export default function Footer({ lang, dict }: { lang: string; dict: any }) {
         <div className={styles.bottom}>
           <p>{dict.footer.rights}</p>
           <div className={styles.socials}>
-            {/* Social icons if needed */}
+            <a 
+              href="https://www.facebook.com/diabcam" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              title="Facebook"
+            >
+              <Facebook size={20} />
+            </a>
           </div>
+
         </div>
       </div>
     </footer>

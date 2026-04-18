@@ -2,7 +2,8 @@ import { getDictionary } from '@/lib/get-dictionary'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import styles from '../kontakt/Contact.module.css'
-import { Mail, MessageCircle } from 'lucide-react'
+import { Mail, MessageCircle, Facebook } from 'lucide-react'
+
 
 export default async function ContactPage({
   params,
@@ -43,7 +44,18 @@ export default async function ContactPage({
                   <div className={styles.value}>m.me/682745358260897</div>
                 </div>
               </a>
+
+              <a href="https://www.facebook.com/diabcam" target="_blank" rel="noopener noreferrer" className={styles.option}>
+                <div className={styles.icon}>
+                  <Facebook size={24} />
+                </div>
+                <div>
+                  <div className={styles.label}>Facebook</div>
+                  <div className={styles.value}>facebook.com/diabcam</div>
+                </div>
+              </a>
             </div>
+
           </div>
         </div>
       </div>

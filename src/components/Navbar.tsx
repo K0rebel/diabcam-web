@@ -16,9 +16,12 @@ export default function Navbar({ lang, dict }: { lang: string; dict: any }) {
           <span>DiabCam</span>
         </Link>
         <div className={styles.links}>
+          <a href="#news" className={styles.navLink}>{dict.news.title}</a>
           <Link href={`/${lang === 'pl' ? 'en' : 'pl'}`} className={styles.langSwitch}>
             {lang === 'pl' ? 'English' : 'Polski'}
           </Link>
+
+
           <a href="https://play.google.com/store/apps/details?id=com.corebell.diabcam" className={styles.cta}>
             {dict.hero.cta}
           </a>

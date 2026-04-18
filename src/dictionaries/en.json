@@ -14,7 +14,9 @@
     "searchDesc": "Scan barcodes or search a database of over 5 million products."
   },
   "diets": {
+    "title": "Why DiabCam?",
     "subtitle": "Explore benefits tailored to your needs",
+
     "diabeticTitle": "For Diabetics",
     "diabeticDesc": "Precise estimation of WW (Carbohydrate Units) and WBT (Protein-Fat Units). Control of GI and Glycemic Load.",
     "ketoTitle": "For Keto & Low Carb",
@@ -34,7 +36,12 @@
     "contact": "Contact",
     "rights": "© 2026 DiabCam. All rights reserved."
   },
+  "news": {
+    "title": "News",
+    "description": "Follow our latest posts and updates directly from Facebook."
+  },
   "waitlist": {
+
     "title": "Release on iOS soon!",
     "description": "Join the waitlist and we will notify you as soon as the app drops in the App Store.",
     "placeholder": "Your email address",
