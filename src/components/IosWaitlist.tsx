@@ -15,10 +15,12 @@ export default function IosWaitlist({ dict }: { dict: any }) {
     if (result.success) {
       setStatus('success')
     } else {
+      console.error('Waitlist submission failed:', result.error)
       setStatus('error')
       // Custom error message or default from dict
       setErrorMessage(dict.waitlist.error)
     }
+
   }
 
   return (
