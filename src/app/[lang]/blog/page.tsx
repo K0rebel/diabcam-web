@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getAllPosts } from '@/lib/blog'
-import { getDictionary } from '@/dictionaries'
+import { getDictionary } from '@/lib/get-dictionary'
 import styles from './page.module.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
