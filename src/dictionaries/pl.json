@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Liczy się mniej liczenia",
+    "description": "DiabCam to inteligentny skaner posiłków AI, który odciąży Cię od żmudnego wpisywania danych.\nZrób zdjęcie, a resztę zrobi za Ciebie nasza technologia.",
+    "cta": "Pobierz w Google Play"
+  },
+  "features": {
+    "title": "3 sposoby na dodanie posiłku",
+    "photoTitle": "Zdjęcie",
+    "photoDesc": "Sztuczna inteligencja rozpoznaje potrawy na podstawie zdjęcia. AI zidentyfikuje składniki i poda wartości odżywcze.",
+    "describeTitle": "Opisz",
+    "describeDesc": "Analiza głosowa lub opisowa. Powiedz „pierś z kurczaka z brokułami”, a aplikacja zajmie się resztą.",
+    "searchTitle": "Wyszukaj",
+    "searchDesc": "Skanuj kody kreskowe lub przeszukuj bazę ponad 5 milionów produktów."
+  },
+  "diets": {
+    "title": "Dlaczego DiabCam?",
+    "subtitle": "Poznaj korzyści dopasowane do Twoich potrzeb",
+
+    "diabeticTitle": "Dla Diabetyków",
+    "diabeticDesc": "Precyzyjne szacowanie WW (Wymienników Węglowodanowych) i WBT (Białkowo-Tłuszczowych). Kontrola IG i Ładunku Glikemicznego.",
+    "ketoTitle": "Dla Keto i Low Carb",
+    "ketoDesc": "Automatyczne śledzenie węglowodanów netto i proporcji makroskładników zoptymalizowanych pod Twoje zapotrzebowanie.",
+    "fitnessTitle": "Dla Dbających o Sylwetkę",
+    "fitnessDesc": "Monitoruj makroskładniki i kalorie bez konieczności ręcznego ważenia każdego produktu."
+  },
+  "stats": {
+    "title": "Dziennik i Statystyki",
+    "desc": "Przejrzysta historia Twojego żywienia i raporty PDF, które możesz przeanalizować ze swoim dietetykiem.",
+    "calendar": "Intuicyjny kalendarz posiłków",
+    "reports": "Zaawansowane raporty do celów medycznych",
+    "sync": "Spersonalizowany plan dietetyczny"
+  },
+  "footer": {
+    "privacy": "Polityka Prywatności",
+    "contact": "Kontakt",
+    "rights": "© 2026 DiabCam. Wszelkie prawa zastrzeżone."
+  },
+  "news": {
+    "title": "Aktualności",
+    "description": "Śledź nasze najnowsze posty i aktualizacje bezpośrednio z Facebooka."
+  },
+  "waitlist": {
+
+    "title": "Premiera na iOS wkrótce!",
+    "description": "Zapisz się na listę oczekujących, a powiadomimy Cię jako jednych z pierwszych, gdy aplikacja pojawi się w App Store.",
+    "placeholder": "Twój adres e-mail",
+    "button": "Zapisz mnie",
+    "success": "Dziękujemy! Odezwiemy się w dniu premiery.",
+    "error": "Wystąpił błąd. Spróbuj ponownie później."
+  }
+}

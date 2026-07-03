@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Less counting matters",
+    "description": "DiabCam is an intelligent AI meal scanner that relieves you from tedious data entry. Just take a photo, and our technology does the rest.",
+    "cta": "Download on Google Play"
+  },
+  "features": {
+    "title": "3 ways to add a meal",
+    "photoTitle": "Photo",
+    "photoDesc": "Artificial intelligence recognizes dishes based on a photo. AI identifies ingredients and provides nutritional values.",
+    "describeTitle": "Describe",
+    "describeDesc": "Voice or text analysis. Just say \"chicken breast with broccoli\" and the app will handle the rest.",
+    "searchTitle": "Search",
+    "searchDesc": "Scan barcodes or search a database of over 5 million products."
+  },
+  "diets": {
+    "title": "Why DiabCam?",
+    "subtitle": "Explore benefits tailored to your needs",
+
+    "diabeticTitle": "For Diabetics",
+    "diabeticDesc": "Precise estimation of WW (Carbohydrate Units) and WBT (Protein-Fat Units). Control of GI and Glycemic Load.",
+    "ketoTitle": "For Keto & Low Carb",
+    "ketoDesc": "Automatic tracking of net carbs and macronutrient ratios optimized for your needs.",
+    "fitnessTitle": "For Fitness Enthusiasts",
+    "fitnessDesc": "Monitor macronutrients and calories without the need to manually weigh every product."
+  },
+  "stats": {
+    "title": "Diary & Statistics",
+    "desc": "Clear history of your nutrition and PDF reports that you can analyze with your dietitian.",
+    "calendar": "Intuitive meal calendar",
+    "reports": "Advanced reports for medical purposes",
+    "sync": "Personalized diet plan"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "rights": "© 2026 DiabCam. All rights reserved."
+  },
+  "news": {
+    "title": "News",
+    "description": "Follow our latest posts and updates directly from Facebook."
+  },
+  "waitlist": {
+
+    "title": "Release on iOS soon!",
+    "description": "Join the waitlist and we will notify you as soon as the app drops in the App Store.",
+    "placeholder": "Your email address",
+    "button": "Join Waitlist",
+    "success": "Thank you! We'll keep you posted.",
+    "error": "An error occurred. Please try again later."
+  }
+}
