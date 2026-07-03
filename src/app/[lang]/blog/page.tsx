@@ -1,13 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getAllPosts } from '@/lib/blog'
-import { getDictionary } from '@/lib/get-dictionary'
 import styles from './page.module.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import plDict from '@/dictionaries/pl.json'
+import enDict from '@/dictionaries/en.json'
+
+const dicts: Record<string, typeof plDict> = { pl: plDict, en: enDict }
+
+// Generujemy statyczne strony dla każdej wersji językowej w czasie BUDOWANIA
+export async function generateStaticParams() {
+  return [{ lang: 'pl' }, { lang: 'en' }]
+}
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: string } }) {
-  const dict = await getDictionary(lang as any)
+  const dict = dicts[lang] ?? plDict
   return {
     title: `${dict.blog.title} | DiabCam`,
     description: dict.blog.subtitle,
@@ -15,7 +23,8 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
 }
 
 export default async function BlogIndex({ params: { lang } }: { params: { lang: string } }) {
-  const dict = await getDictionary(lang as any)
+  const dict = dicts[lang] ?? plDict
+  // getAllPosts() jest wywoływane podczas BUDOWANIA, nie w runtime serverless
   const posts = getAllPosts()
 
   return (
@@ -36,8 +45,8 @@ export default async function BlogIndex({ params: { lang } }: { params: { lang: 
                 <Link href={`/${lang}/blog/${post.slug}`} key={post.slug} className={styles.card}>
                   <div className={styles.imageWrap}>
                     {post.coverImage ? (
-                      <Image 
-                        src={post.coverImage} 
+                      <Image
+                        src={post.coverImage}
                         alt={post.title}
                         fill
                         className={styles.image}

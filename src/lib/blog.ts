@@ -1,9 +1,11 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { marked } from 'marked'
 
-// Używamy __dirname zamiast process.cwd() dla kompatybilności z Netlify/Vercel serverless
-const contentDir = path.join(__dirname, '..', 'content', 'blog')
+// W SSG (generateStaticParams) ten kod działa podczas BUILD-a na Netlify,
+// gdzie process.cwd() = /opt/build/repo i pliki .md istnieją na dysku
+const contentDir = path.join(process.cwd(), 'src', 'content', 'blog')
 
 export interface BlogPost {
   slug: string
@@ -11,7 +13,7 @@ export interface BlogPost {
   description: string
   date: string
   coverImage?: string
-  content: string
+  contentHtml: string // HTML gotowy do dangerouslySetInnerHTML – bez problemów z ESM
 }
 
 export function getAllPosts(): BlogPost[] {
@@ -28,13 +30,16 @@ export function getAllPosts(): BlogPost[] {
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const { data, content } = matter(fileContents)
 
+      // marked.parse() = synchroniczne (marked() w v14 zwraca Promise!)
+      const contentHtml = marked.parse(content) as string
+
       return {
         slug,
         title: data.title || '',
         description: data.description || '',
         date: data.date || '',
         coverImage: data.coverImage || '',
-        content,
+        contentHtml,
       } as BlogPost
     })
     // Sortowanie malejąco po dacie
@@ -50,6 +55,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
+    const contentHtml = marked.parse(content) as string
 
     return {
       slug,
@@ -57,7 +63,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       description: data.description || '',
       date: data.date || '',
       coverImage: data.coverImage || '',
-      content,
+      contentHtml,
     } as BlogPost
   } catch (e) {
     console.error(`Błąd przy odczycie pliku ${slug}.md`, e)

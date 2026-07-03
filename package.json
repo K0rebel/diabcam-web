@@ -13,11 +13,10 @@
     "firebase": "^12.11.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "latest",
+    "marked": "^18.0.5",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-markdown": "^10.1.0",
-    "remark-gfm": "^4.0.1",
     "tailwind-merge": "latest"
   },
   "devDependencies": {
