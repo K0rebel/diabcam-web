@@ -48,5 +48,13 @@
     "button": "Join Waitlist",
     "success": "Thank you! We'll keep you posted.",
     "error": "An error occurred. Please try again later."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips, facts, and latest knowledge about diabetes.",
+    "readMore": "Read more →",
+    "backToBlog": "← Back to blog",
+    "publishedOn": "Published on",
+    "recentPosts": "Recent posts"
   }
 }

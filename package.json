@@ -11,10 +11,13 @@
   "dependencies": {
     "clsx": "latest",
     "firebase": "^12.11.0",
+    "gray-matter": "^4.0.3",
     "lucide-react": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "tailwind-merge": "latest"
   },
   "devDependencies": {

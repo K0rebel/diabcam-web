@@ -48,5 +48,13 @@
     "button": "Zapisz mnie",
     "success": "Dziękujemy! Odezwiemy się w dniu premiery.",
     "error": "Wystąpił błąd. Spróbuj ponownie później."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Porady, ciekawostki i najnowsza wiedza o cukrzycy.",
+    "readMore": "Czytaj dalej →",
+    "backToBlog": "← Wróć do bloga",
+    "publishedOn": "Opublikowano",
+    "recentPosts": "Ostatnie wpisy"
   }
 }

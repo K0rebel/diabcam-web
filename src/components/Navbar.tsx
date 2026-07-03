@@ -51,12 +51,15 @@ export default function Navbar({ lang, dict }: { lang: string; dict: any }) {
 
         {/* Desktop + Mobile links */}
         <div className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>
-          <a href="#features" className={styles.navLink} onClick={close}>
+          <a href="/#features" className={styles.navLink} onClick={close}>
             Funkcje
           </a>
-          <a href="#news" className={styles.navLink} onClick={close}>
+          <a href="/#news" className={styles.navLink} onClick={close}>
             {dict.news.title}
           </a>
+          <Link href={`/${lang}/blog`} className={styles.navLink} onClick={close}>
+            {dict.blog?.title || 'Blog'}
+          </Link>
           <Link
             href={`/${lang === 'pl' ? 'en' : 'pl'}`}
             className={styles.langSwitch}
