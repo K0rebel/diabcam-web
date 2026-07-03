@@ -7,7 +7,6 @@ interface ScrollRevealProps {
   className?: string
   delay?: number
   direction?: 'up' | 'left' | 'right'
-  as?: keyof JSX.IntrinsicElements
 }
 
 export default function ScrollReveal({
